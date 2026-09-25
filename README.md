@@ -1089,9 +1089,7 @@ https://github.com/Amrutha-AItech/ai-agent-portfolio
 
 ### Live Portfolio
 
-Add the deployed portfolio URL here:
-
-YOUR_LIVE_PORTFOLIO_URL
+https://ai-agent-portfolio-seven.vercel.app
 
 ---
 
