@@ -266,6 +266,9 @@ const stagger = {
    APP
 ========================================================= */
 
+
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 function App() {
 
   const [message, setMessage] = useState("");
@@ -350,19 +353,19 @@ const handleVoiceInput = () => {
   try {
 
     const response = await fetch(
-      "http://127.0.0.1:8000/chat",
-      {
-        method: "POST",
+  `${API_BASE_URL}/chat`,
+  {
+    method: "POST",
 
-        headers: {
-          "Content-Type": "application/json",
-        },
+    headers: {
+      "Content-Type": "application/json",
+    },
 
-        body: JSON.stringify({
-          message: userMessage,
-        }),
-      }
-    );
+    body: JSON.stringify({
+      message: userMessage,
+    }),
+  }
+);
 
     const data = await response.json();
 
